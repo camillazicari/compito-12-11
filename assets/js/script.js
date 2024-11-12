@@ -117,7 +117,7 @@ const tableArea = document.getElementById('tableArea');
 const elementiTab = ['immagine', 'nome prodotto', 'quantità', 'prezzo'];
 const generateTable = function () {
     const tabella = document.createElement('table');
-    tabella.innerHTML = `<tr> <th> ${'immagine'} </th> </tr> <tr> <th> ${'nome prodotto'} </th> </tr> <tr> <th> ${'quantità'} </th> </tr> <tr> <th> ${'prezzo'} </th> </tr>`
+    tabella.innerHTML = `<tr> <th> ${'immagine'} </th> </tr> <tr> <th> ${'nome prodotto'} </th> </tr> <tr> <th> ${'quantità'} </th> </tr> <tr> <th> ${'prezzo'} </th> </tr>`;
 };
 generateTable();
 

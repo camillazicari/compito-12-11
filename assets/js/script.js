@@ -4,7 +4,7 @@
 const title = document.querySelector("h1");
 
 const changeTitle = function () {
-  return (title.innerText = "DOM Manipulation");
+  title.innerText = "DOM Manipulation";
 };
 changeTitle();
 
@@ -13,7 +13,7 @@ changeTitle();
      */
 
 const addClassToTitle = function () {
-  title.className = "myHeading";
+  title.classList.add("myHeading");
 };
 addClassToTitle();
 
@@ -113,8 +113,13 @@ revealFooterLink();
         Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
         La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
      */
-
-const generateTable = function () {};
+const tableArea = document.getElementById('tableArea');
+const elementiTab = ['immagine', 'nome prodotto', 'quantità', 'prezzo'];
+const generateTable = function () {
+    const tabella = document.createElement('table');
+    tabella.innerHTML = `<tr> <th> ${'immagine'} </th> </tr> <tr> <th> ${'nome prodotto'} </th> </tr> <tr> <th> ${'quantità'} </th> </tr> <tr> <th> ${'prezzo'} </th> </tr>`
+};
+generateTable();
 
 /* ESERCIZIO 12
         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri

@@ -90,13 +90,24 @@ paintItGreen();
         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
        */
 
-const makeItClickable = function () {};
+const makeItClickable = function () {
+  title.addEventListener("click", function () {
+    title.textContent = title.textContent.slice(0, -1);
+  });
+};
+makeItClickable();
 
 /* ESERCIZIO 10
         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
        */
-
-const revealFooterLink = function () {};
+const footer = document.querySelector("footer");
+const revealFooterLink = function () {
+  footer.addEventListener("click", function () {
+    const footerLink = document.querySelector("footer a");
+    alert(footerLink.href);
+  });
+};
+revealFooterLink();
 
 /* ESERCIZIO 11
         Crea una funzione che crei una tabella nell'elemento con id "tableArea". 

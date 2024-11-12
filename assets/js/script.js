@@ -1,7 +1,7 @@
 /* ESERCIZIO 1
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
-const title = document.querySelector("title");
+const title = document.querySelector("h1");
 
 const changeTitle = function () {
   return (title.innerText = "DOM Manipulation");
@@ -22,10 +22,10 @@ addClassToTitle();
        */
 
 const changePcontent = function () {
-    const changeP = document.querySelectorAll('div p');
-    for (let i=0; i<changeP.length; i++) {
-        changeP[i].innerText = "ciao a tutti!";
-    }
+  const changeP = document.querySelectorAll("div p");
+  for (let i = 0; i < changeP.length; i++) {
+    changeP[i].innerText = "ciao a tutti!";
+  }
 };
 changePcontent();
 
@@ -33,7 +33,13 @@ changePcontent();
         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
        */
 
-const changeUrls = function () {};
+const changeUrls = function () {
+  const linkProperty = document.querySelectorAll("a:not(footer a)");
+  linkProperty.forEach((element) => {
+    element.setAttribute("href", "https://www.google.com");
+  });
+};
+changeUrls();
 
 /* ESERCIZIO 5
         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata

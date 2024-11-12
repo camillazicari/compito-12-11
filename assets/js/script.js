@@ -23,7 +23,9 @@ addClassToTitle();
 
 const changePcontent = function () {
     const changeP = document.querySelectorAll('div p');
-    changeP.innerText = 'ciao a tutti!'
+    for (let i=0; i<changeP.length; i++) {
+        changeP[i].innerText = "ciao a tutti!";
+    }
 };
 changePcontent();
 

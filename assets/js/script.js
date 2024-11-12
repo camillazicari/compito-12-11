@@ -56,7 +56,7 @@ addToTheSecond();
 /* ESERCIZIO 6
         Scrivi una funzione che aggiunga un paragrafo al primo div
      */
-    
+
 const firstDiv = document.querySelector("div");
 const addParagraph = function () {
   const p = document.createElement("p");
@@ -71,15 +71,20 @@ addParagraph();
 
 const firstList = document.getElementById("firstList");
 const hideFirstUl = function () {
-  firstList.style.display = "none";
+  firstList.innerText = "";
 };
 hideFirstUl();
 
 /* ESERCIZIO 8 
         Scrivi una funzione che renda verde il background di ogni lista non ordinata
        */
-
-const paintItGreen = function () {};
+const unorderedList = document.querySelectorAll("ul");
+const paintItGreen = function () {
+  unorderedList.forEach((element) => {
+    element.style.backgroundColor = "green";
+  });
+};
+paintItGreen();
 
 /* ESERCIZIO 9
         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
